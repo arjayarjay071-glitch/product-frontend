@@ -88,7 +88,7 @@ const load = async () => {
               <td>{p.id}</td>
               <td>{p.product_name}</td>
               <td>{p.description}</td>
-              <td>{p.price}</td>
+              <td>₱{Number(p.price).toLocaleString("en-PH", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
               <td>{p.quantity}</td>
               <td>
                 <button onClick={() => handleEdit(p)}>Edit</button>
